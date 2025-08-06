@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <h1 class="page-title">Recent Posts</h1>
+  {{ .Content }}
+  <div class="time-list">
+    <ul>
+      {{ $recent := first 5 (sort .Site.RegularPages "Date" "desc") }}
+      {{ range $recent }}
+        <li>
+          <span>{{- partial "date" .Date -}}</span>
+          <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+

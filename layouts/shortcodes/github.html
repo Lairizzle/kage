@@ -1,0 +1,22 @@
+{{/*
+Usage:
+  {{< github user="username" repo="reponame" desc="Short description" >}}
+*/}}
+
+{{ $user := .Get "user" }}
+{{ $repo := .Get "repo" }}
+{{ $desc := .Get "desc" }}
+{{ $avatar := printf "https://github.com/%s.png" $user }}
+
+<div class="github-card">
+  <div class="github-card-header">
+    <img class="github-avatar" src="{{ $avatar }}" alt="{{ $user }}'s avatar">
+    <div class="github-info">
+      <a href="https://github.com/{{ $user }}/{{ $repo }}" target="_blank" rel="noopener">
+        <strong>{{ $user }}/{{ $repo }}</strong>
+      </a>
+      <p>{{ $desc }}</p>
+    </div>
+  </div>
+</div>
+

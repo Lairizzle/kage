@@ -1,0 +1,20 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Kage"
+license = "MIT"
+description = "A minimalist Tokyo Night inspired Hugo theme with a clean, shadowy aesthetic."
+homepage = "https://github.com/lairizzle/kage"
+demosite = "https://rizzforge.org"
+tags = ["minimalist", "dark", "tokyo night", "clean", "responsive", "blog", "portfolio"]
+features = ["responsive", "dark mode", "minimalist", "typography focused"]
+
+[author]
+name = "Keith Henderson"
+homepage = "https://rizzforge.org"
+
+[module]
+
+[module.hugoVersion]
+extended = true
+min = "0.93.0"
