@@ -8,25 +8,23 @@
 "rss" }}
 
 <div class="social-icons">
-  {{ range $key := $order }}
-    {{ $value := index site.Params.social $key }}
-    {{ if $value }}
-      {{ $icon := $key }}
-      {{ $prefix := "fab" }}
+	{{ if and (isset site.Params.social $key) (ne (index site.Params.social $key) "") }}
+		{{ $value := index site.Params.social $key }}
+		{{ $icon := $key }}
+		{{ $prefix := "fab" }}
 
-      {{ if eq $key "email" }}
-        {{ $icon = "envelope" }}
-        {{ $prefix = "fas" }}
-      {{ else if eq $key "rss" }}
-        {{ $icon = "rss" }}
-        {{ $prefix = "fas" }}
-      {{ end }}
+		{{ if eq $key "email" }}
+			{{ $icon = "envelope" }}
+			{{ $prefix = "fas" }}
+		{{ else if eq $key "rss" }}
+			{{ $icon = "rss" }}
+			{{ $prefix = "fas" }}
+		{{ end }}
 
-      <a href="{{ $value }}" target="_blank" rel="noopener">
-        <i class="{{ $prefix }} fa-{{ $icon }}"></i>
-      </a>
-    {{ end }}
-  {{ end }}
+		<a href="{{ $value }}" target="_blank" rel="noopener">
+			<i class="{{ $prefix }} fa-{{ $icon }}"></i>
+		</a>
+	{{ end }}
 </div>
 
 <p>
