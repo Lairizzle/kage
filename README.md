@@ -25,3 +25,5 @@ Set your theme in hugo.toml:
 ```toml
 theme = "kage"
 ```
+## Credits
+Special thank you to https://github.com/ntk148v (Kien Nguyen-Tuan) for inspiration based on [Shibui](https://github.com/ntk148v/shibui). This theme was used as a reference for learning to build a clean hugo theme.
