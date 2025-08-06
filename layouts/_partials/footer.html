@@ -9,8 +9,8 @@
 
 <div class="social-icons">
   {{ range $key := $order }}
-    {{ $value := index site.Params.social $key }}
-    {{ if $value }}
+    {{ if and (isset site.Params.social $key) (ne (index site.Params.social $key) "") }}
+      {{ $value := index site.Params.social $key }}
       {{ $icon := $key }}
       {{ $prefix := "fab" }}
 
