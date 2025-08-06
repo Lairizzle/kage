@@ -19,7 +19,7 @@ Perfect for blogs, portfolios, and technical documentation.
 Add Kage to your Hugo site:
 
 ```bash
-git submodule add https://github.com/yourusername/kage themes/kage
+git submodule add https://github.com/lairizzle/kage themes/kage
 ```
 Set your theme in hugo.toml:
 ```toml
