@@ -441,23 +441,30 @@ blockquote > :last-child {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
 }
 
 .post-content table th,
 .post-content table td {
   padding: 0.5rem;
-  white-space: nowrap;
+  white-space: normal;
+	word-break: break-word;
   border: 1px solid #ddd;
 }
 
 @media (max-width: 600px) {
   .post-content table {
+  	font-size: 0.70rem;
     display: block;
+    max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .path-nav li {
+  .post-content th,
+  .post-content td {
+    white-space: normal; /* Let text wrap */
+    word-break: break-word; /* Prevent overflow */
+  }  .path-nav li {
     max-width: 100px;
   }
   .path-nav li:first-child {
