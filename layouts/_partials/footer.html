@@ -9,8 +9,8 @@
 
 <div class="social-icons">
   {{ range $key := $order }}
-    {{ $val := index site.Params.social $key }}
-    {{ if and $val (ne $val "") }}
+    {{ $value := index site.Params.social $key }}
+    {{ if $value }}
       {{ $icon := $key }}
       {{ $prefix := "fab" }}
 
@@ -22,7 +22,7 @@
         {{ $prefix = "fas" }}
       {{ end }}
 
-      <a href="{{ $val }}" target="_blank" rel="noopener">
+      <a href="{{ $value }}" target="_blank" rel="noopener">
         <i class="{{ $prefix }} fa-{{ $icon }}"></i>
       </a>
     {{ end }}

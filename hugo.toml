@@ -2,10 +2,6 @@ baseURL = 'https://example.org/'
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
-[params]
-  author = "My Name"
-  email = "me@myemail.com"
-
 [menus]
   [[menus.main]]
     name = 'Home'
@@ -21,18 +17,6 @@ title = 'My New Hugo Site'
     name = 'Tags'
     pageRef = '/tags'
     weight = 30
-
-[params.social]
-	email = "mailto:me@myemail.com"
-	github = "https://github.com/"
-	youtube = "https://www.youtube.com/"
-	twitch = "https://twitch.tv/"
-	rss = "/index.xml"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
 
 [module]
   [module.hugoVersion]
