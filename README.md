@@ -57,7 +57,7 @@ theme = "kage"
 ```
 
 ### Social Icons
-To add social icons, you can indlude them in your hugo.toml:
+To add social icons, you can include them in your hugo.toml:
 ```toml
 [params.social]
   email        = "mailto:you@example.com"
