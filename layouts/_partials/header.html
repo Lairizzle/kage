@@ -1,11 +1,15 @@
 <header>
-	  <nav class="path-nav">
-    <ol>
+  <nav class="path-nav">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-icon">
+        <img src="/favicon.ico" alt="Home Icon">
+      </li>
       {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
     </ol>
-		<div class="terminal-nav">
-    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-  </div>
+
+    <div class="terminal-nav">
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    </div>
   </nav>
 </header>
 
