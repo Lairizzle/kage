@@ -16,6 +16,14 @@ Perfect for blogs, portfolios, and technical documentation.
 
 ## Installation
 
+Create your hugo site, cd into it and init a git.
+
+```bash
+hugo new site mysite
+cd mysite
+git init
+```
+
 Add Kage to your Hugo site:
 
 ```bash
